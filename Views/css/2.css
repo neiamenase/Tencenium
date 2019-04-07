@@ -53,6 +53,7 @@ th {
   text-align: left;
   padding: 20px;
   width : 30%;
+  class : "wb-stl-normal";
 }
 
 td {

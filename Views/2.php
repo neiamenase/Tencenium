@@ -107,23 +107,23 @@
 					<div id="wb_element_instance23" class="wb_element" style=" line-height: normal;">
 						<table>
 							<tr>
-								<th class="wb-stl-normal">Date</th>
+								<th>Date</th>
 								<td>a</td>
 							</tr>
 							<tr>
-								<th class="wb-stl-normal">Time</th>
+								<th>Time</th>
 								<td>b</td>
 							</tr>
 							<tr>
-								<th class="wb-stl-normal">Venue</th>
+								<th>Venue</th>
 								<td>c</td>
 							</tr>
 							<tr>
-								<th class="wb-stl-normal">Location</th>
+								<th>Location</th>
 								<td>d</td>
 							</tr>
 							<tr>
-								<th class="wb-stl-normal">Remarks</th>
+								<th>Remarks</th>
 								<td>e</td>
 							</tr>
 						</table>
