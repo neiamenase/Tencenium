@@ -9,7 +9,8 @@
 	//$conn = new PDO("mysql:host=$servername;dbname=$database", $username, $password);
 	//echo "<p>servername: $servername | username $username | password: $password | database $database<p>";
 	function getEvent(){
-		$sql= "SELECT e.name as eventName, date, venue, location, g.name as groupName From event  e 
+		$sql= "SELECT e.name as Name, Date, Venue, Location
+				From event  e 
 			    inner join `group` g on e.groupId = g.id
 			    order by date DESC";
 
