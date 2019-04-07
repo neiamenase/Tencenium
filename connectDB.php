@@ -3,41 +3,36 @@
 
 // comes with a user level u
 
-$servername = "localhost";
-$username = "id4908657_neiamenase";
-$password = "12345678";
-$database = "id4908657_utility";
-$event = "event";
-
-try{
-	getEvent();
-
-}catch(PDOException $e) {    
-	echo "Connection failed: " . $e->getMessage();
-}
 
 	//conn1 = mysqli_connect($servername, $username, $password);
 	//$conn = new PDO("mysql:host=$servername;dbname=$database", $username, $password);
 	//echo "<p>servername: $servername | username $username | password: $password | database $database<p>";
 	function getEvent(){
 		$sql= "SELECT e.name as eventName, date, venue, location, g.name as groupName From event  e 
-	    inner join `group` g on e.groupId = g.id
-	    order by date DESC";
+			    inner join `group` g on e.groupId = g.id
+			    order by date DESC";
 
 	    $result = connectDB($sql);
-		
+		//return $result;
+		$temp = "<div class=\"divTable\"><div class=\"headRow\"> <div class=\"divCell\" align=\"center\">Name</div> <div  class=\"divCell\">Date</div> <div  class=\"divCell\">Location</div><div  class=\"divCell\">Group</div> </div>" ;
 		if ($result->num_rows > 0) {
-		    echo "<table ><tr><th>Name</th><th>Date</th><th>Venue</th><th>Location</th><th>Group</th></tr>";
 		    while($row = $result->fetch_assoc()) {
-		        echo "<tr><td>".$row["eventName"]."</td><td>".$row["status"]."</td><td>".$row["isDrawEvent"]."</td><td>".$row["date"]."</td><td>".$row["year"]."</td><td>".$row["venue"]."</td><td>".$row["location"]."</td><td>".$row["groupName"]."</td></tr>";
+		        $temp = $temp . "<div class=\"divRow\"> <div class=\"divCell\">". $row["eventName"] .  "</div> <div class=\"divCell\">". $row["date"]. "</div> <div class=\"divCell\">" . $row["venue"] . "</div> <div class=\"divCell\">" . $row["location"] . "</div> <div class=\"divCell\">" . $row["groupName"]."</div> </div>";
 	    }
-	    	echo "</table>";
+	    	$temp = $temp . "</div>";
+	    	return $temp;
 		} else {
 	    	echo "0 results";
 		}
 	}
+       
 
     function connectDB($sql){
+    	$servername = "localhost";
+		$username = "id4908657_neiamenase";
+		$password = "12345678";
+		$database = "id4908657_utility";
+
     	try {
 	    	$conn = new mysqli($servername, $username, $password, $database);
 			if ($conn->connect_error) {

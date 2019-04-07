@@ -39,7 +39,7 @@
 								<a href="" target="_self">Home</a>
 							</li>
 							<li>
-								<a href="About-us/" target="_self">About us</a>
+								<a href="Upcoming/" target="_self">Upcoming</a>
 							</li>
 							<li class="active">
 								<a href="Event/" target="_self">Events</a>
@@ -163,9 +163,16 @@
 															<div style="font-size: 24px; width: 100%; color: #c00; padding: 0 20%; text-align: center; display: inline-block; vertical-align: middle;">Get API Key from 
 												
 																<a style="display: inline-block; max-width: 100%; word-break: break-all; color: #fff;" target="_blank" href="https://developers.google.com/maps/documentation/javascript/get-api-key">https://developers.google.com/maps/documentation/javascript/get-api-key</a>
+															
+					<?php 	include 'connectDB.php';?>
+					<?php 	echo  getEvent();?>
+				
 															</div>
+														
 															<div style="vertical-align: middle; height: 100%; display: inline-block;"></div>
+														
 														</div>
+
 														<script type="text/javascript">
 				(function() {
 					var resizeFunc = function() {
