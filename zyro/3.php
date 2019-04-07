@@ -44,9 +44,9 @@
 							<li class="active">
 								<a href="Event/" target="_self">Events</a>
 							</li>
-							<li class="active">
-							<a href="Draw/" target="_self">Draw</a>
-						</li>
+							<li>
+								<a href="Draw/" target="_self">Draw</a>
+							</li>
 						</ul>
 						<div class="clearfix"></div>
 					</div>

@@ -35,7 +35,7 @@
 						<li>
 							<a href="About-us/" target="_self">About us</a>
 						</li>
-						<li class="active">
+						<li>
 							<a href="Event/" target="_self">Events</a>
 						</li>
 						<li class="active">
