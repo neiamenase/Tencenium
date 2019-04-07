@@ -33,7 +33,7 @@
 							<a href="" target="_self">Home</a>
 						</li>
 						<li>
-							<a href="About-us/" target="_self">About us</a>
+							<a href="Upcoming/" target="_self">Upcoming</a>
 						</li>
 						<li>
 							<a href="Event/" target="_self">Events</a>

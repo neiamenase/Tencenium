@@ -2,13 +2,13 @@
 <html lang="en">
 <head>
 	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
-	<title>About us</title>
+	<title>Upcoming</title>
 	<base href="{{base_url}}" />
 	<meta name="viewport" content="width=1200" />
 	<meta name="description" content="" />
 	<meta name="keywords" content="" />
 	<!-- Facebook Open Graph -->
-	<meta name="og:title" content="About us" />
+	<meta name="og:title" content="Upcoming />
 	<meta name="og:description" content="" />
 	<meta name="og:image" content="" />
 	<meta name="og:type" content="article" />
@@ -39,7 +39,7 @@
 							<a href="" target="_self">Home</a>
 						</li>
 						<li class="active">
-							<a href="About-us/" target="_self">About us</a>
+							<a href="Upcoming/" target="_self">Upcoming</a>
 						</li>
 						<li>
 							<a href="Event/" target="_self">Events</a>
@@ -53,22 +53,12 @@
 				<div id="wb_element_instance17" class="wb_element wb-elm-orient-horizontal">
 					<div class="wb-elm-line"></div>
 				</div>
-				<div id="wb_element_instance18" class="wb_element wb_element_picture">
-					<a href="http://facebook.com" target="1">
-						<img alt="gallery/facebook-icon" src="gallery_gen/4748b934a4555ca627645be2a878c8c9_30x30.png">
-					</a>
-				</div>
-				<div id="wb_element_instance19" class="wb_element wb_element_picture">
-					<a href="http://twitter.com" target="1">
-						<img alt="gallery/twitter-icon" src="gallery_gen/43a0b234aaf5583e248ab21c7bc03aca_30x30.png">
-					</a>
-				</div>
 				<div id="wb_element_instance20" class="wb_element wb-elm-orient-horizontal">
 					<div class="wb-elm-line"></div>
 				</div>
 				<div id="wb_element_instance21" class="wb_element" style=" line-height: normal;">
 					<h5 class="wb-stl-subtitle" style="text-align: center;">
-						<span class="wb_tr_ok">My Day</span>
+						<span class="wb_tr_ok">UPCOMING</span>
 					</h5>
 				</div>
 			</div>
@@ -77,25 +67,13 @@
 		</div>
 		<div class="vbox wb_container" id="wb_main">
 			<div class="wb_cont_inner">
-				<div id="wb_element_instance23" class="wb_element" style=" line-height: normal;">
-					<p class="wb-stl-normal">
-						<span style="font-size: 16px; font-weight: normal; line-height: 26px; background-color: transparent;">You will find the latest information about us on this page. Our company is constantly evolving and growing. We provide wide range of services. Our mission is to provide best solution that helps everyone. If you want to contact us, please fill the contact form on our website. We wish you a good day! You will find the latest information about us on this page. Our company is constantly...</span>
-					</p>
-					<p class="wb-stl-normal">Evolving and growing. We provide wide range of services. Our mission is to provide best solution that helps everyone. If you want to contact us, please fill the contact form on our website. We wish you a good day! You will find the latest information about us on this page. Our company is...</p>
-					<p class="wb-stl-normal"></p>
-					<p class="wb-stl-normal">Constantly evolving and growing. We provide wide range of services. Our mission is to provide best solution that helps everyone. If you want to contact us, please fill the contact form on our website. We wish you a good day! You will find the latest information about us on this page. Our company is constantly evolving and...</p>
-					<p class="wb-stl-normal"></p>
-					<p class="wb-stl-normal">Growing. We provide wide range of services. Our mission is to provide best solution that helps everyone. If you want to contact us, please fill the contact form on our website. We wish you a good day! You will find the latest information about us on this page. Our company is constantly evolving and growing. We provide wide range of services. Our mission is to provide best solution that...</p>
-					<p class="wb-stl-normal">Helps everyone. If you want to contact us, please fill the contact form on our website. We wish you a good day! You will find the latest information about us on this page. Our company is constantly evolving and growing. We provide wide range of services. Our mission is to provide best...</p>
-					<p class="wb-stl-normal"></p>
-					<p class="wb-stl-normal">Solution that helps everyone. If you want to contact us, please fill the contact form on our website. We wish you a good day! You will find the latest information about us on this page. Our company is constantly evolving and growing. We provide wide range of services. Our mission is to provide best solution that helps...</p>
-				</div>
+
 				<div id="wb_element_instance24" class="wb_element" style=" line-height: normal;">
 					<h2 class="wb-stl-heading2">
-						<span class="wb_tr_ok">About us</span>
+						<span class="wb_tr_ok">Details</span>
 					</h2>
 				</div>
-				<div id="wb_element_instance25" class="wb_element" style="width: 100%;">
+				<!-- <div id="wb_element_instance25" class="wb_element" style="width: 100%;">
 					<?php
 					global $show_comments;
 					if (isset($show_comments) && $show_comments) {
@@ -120,18 +98,42 @@
 						<?php
 					}
 					?>
-				</div>
+				</div> -->
+				<div class="wb_cont_outer"></div>
+				<div class="wb_cont_bg"></div>
 			</div>
-			<div class="wb_cont_outer"></div>
-			<div class="wb_cont_bg"></div>
-		</div>
-		<div class="vbox wb_container" id="wb_footer">
-			<div class="wb_cont_inner" style="height: 134px;">
-				<div id="wb_element_instance22" class="wb_element" style=" line-height: normal;">
+			<div class="vbox wb_container" id="wb_footer">
+				<div class="wb_cont_inner" style="height: 134px;">
+					<div id="wb_element_instance23" class="wb_element" style=" line-height: normal;">
+						<table>
+							<tr>
+								<th class="wb-stl-normal">Date</th>
+								<td>a</td>
+							</tr>
+							<tr>
+								<th class="wb-stl-normal">Time</th>
+								<td>b</td>
+							</tr>
+							<tr>
+								<th class="wb-stl-normal">Venue</th>
+								<td>c</td>
+							</tr>
+							<tr>
+								<th class="wb-stl-normal">Location</th>
+								<td>d</td>
+							</tr>
+							<tr>
+								<th class="wb-stl-normal">Remarks</th>
+								<td>e</td>
+							</tr>
+						</table>
+					</div>
+
+				<!-- <div id="wb_element_instance22" class="wb_element" style=" line-height: normal;">
 					<p class="wb-stl-footer">© 2018 
 						<a href="http://tencenium.000webhostapp.com">tencenium.000webhostapp.com</a>
 					</p>
-				</div>
+				</div> -->
 				<div id="wb_element_instance26" class="wb_element" style="text-align: center; width: 100%;">
 					<div class="wb_footer"></div>
 					<script type="text/javascript">
