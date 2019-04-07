@@ -52,19 +52,29 @@ th {
   border: 1px solid #dddddd;
   text-align: left;
   padding: 20px;
+  width : 30%;
 }
 
 td {
+  background-color: #e6e6fa;
   border: 1px solid #dddddd;
   text-align: left;
-  padding: 5px;
+  padding: 20px;
+  width : 70%;
 }
+
+/*tr :nth-child(even) {
+  background-color: #00bfff;
+}
+tr :nth-child(odd) {
+  background-color: #e6e6fa;
+}*/
 /*tr:nth-child(even) {
   background-color: #dddddd;
 }*/
-tr {
+/*tr {
   background-color: #f26818;
-}
+}*/
 
 @media (min-width: 768px) {
 }
