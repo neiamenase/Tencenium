@@ -4,10 +4,11 @@
 	$pages = array(
 		'0'	=> array('id' => '1', 'alias' => '', 'file' => '1.php','controllers' => array()),
 		'1'	=> array('id' => '2', 'alias' => 'About-us', 'file' => '2.php','controllers' => array()),
-		'2'	=> array('id' => '3', 'alias' => 'Contacts', 'file' => '3.php','controllers' => array())
+		'2'	=> array('id' => '3', 'alias' => 'Event', 'file' => '3.php','controllers' => array()),
+		'3'	=> array('id' => '4', 'alias' => 'Draw', 'file' => '4.php','controllers' => array())
 	);
 	$forms = array(
-		'3'	=> array(
+		'4'	=> array(
 			'd251a956' => Array( 'email' => '', 'emailFrom' => '', 'subject' => 'Inquiry from the web page', 'sentMessage' => 'Form was sent.', 'object' => '', 'objectRenderer' => '', 'loggingHandler' => '', 'smtpEnable' => false, 'smtpHost' => null, 'smtpPort' => null, 'smtpEncryption' => null, 'smtpUsername' => null, 'smtpPassword' => null, 'recSiteKey' => null, 'recSecretKey' => null, 'maxFileSizeTotal' => null, 'fields' => array( array( 'fidx' => '0', 'name' => 'Name', 'type' => 'input', 'options' => '' ), array( 'fidx' => '1', 'name' => 'E-mail', 'type' => 'input', 'options' => '' ), array( 'fidx' => '2', 'name' => 'Message', 'type' => 'textarea', 'options' => '' ) ) )
 		)
 	);

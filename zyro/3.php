@@ -42,8 +42,11 @@
 								<a href="About-us/" target="_self">About us</a>
 							</li>
 							<li class="active">
-								<a href="Events/" target="_self">Events</a>
+								<a href="Event/" target="_self">Events</a>
 							</li>
+							<li class="active">
+							<a href="Draw/" target="_self">Draw</a>
+						</li>
 						</ul>
 						<div class="clearfix"></div>
 					</div>
