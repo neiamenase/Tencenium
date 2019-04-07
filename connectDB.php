@@ -1,4 +1,5 @@
 <?php
+
 // GET event list 
 
 // comes with a user level u
@@ -13,17 +14,14 @@
 			    order by date DESC";
 
 	    $result = connectDB($sql);
-		//return $result;
-		$temp = "<div class=\"divTable\"><div class=\"headRow\"> <div class=\"divCell\" align=\"center\">Name</div> <div  class=\"divCell\">Date</div> <div  class=\"divCell\">Location</div><div  class=\"divCell\">Group</div> </div>" ;
+
+		$resArr = [];
 		if ($result->num_rows > 0) {
 		    while($row = $result->fetch_assoc()) {
-		        $temp = $temp . "<div class=\"divRow\"> <div class=\"divCell\">". $row["eventName"] .  "</div> <div class=\"divCell\">". $row["date"]. "</div> <div class=\"divCell\">" . $row["venue"] . "</div> <div class=\"divCell\">" . $row["location"] . "</div> <div class=\"divCell\">" . $row["groupName"]."</div> </div>";
-	    }
-	    	$temp = $temp . "</div>";
-	    	return $temp;
-		} else {
-	    	echo "0 results";
-		}
+		    	$resArr[] = $row;
+	    	}
+	    	return json_encode($resArr);
+		} 
 	}
        
 
@@ -37,6 +35,10 @@
 	    	$conn = new mysqli($servername, $username, $password, $database);
 			if ($conn->connect_error) {
 		    	die("Connection failed: " . $conn->connect_error);
+			} 
+			if (!$conn->set_charset("utf8")) {
+			    printf("Error loading character set utf8: %s\n", $conn->error);
+			    exit();
 			} 
 		    //echo "Connected successfully <br>"; 
 			return $conn->query($sql);
