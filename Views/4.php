@@ -72,6 +72,11 @@
 						document.write('<select id=wb_upcomingSelect>' + select + '</select>');
 					</script>
 				</div>
+
+				<div id="wb_element_instance41" class="wb_element">
+					<button type="button">Draw</button>
+				</div>
+
 			</div>
 		</div>
 	</div>
