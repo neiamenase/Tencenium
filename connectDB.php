@@ -25,7 +25,7 @@
 		} 
 	}
        
-    function getUpcomingEvent(){
+    function getUpcomingEvent(){ // e.date >= CURDATE() and e.status <> 'Ended' implies e.status = 'Upcoming'
 		$sql= "SELECT e.name as Name, Date, Venue, Location
 				From event e 
 			    inner join `group` g on e.groupId = g.id and (g.name like 'WWS%' or g.name = 'Master')
@@ -41,6 +41,40 @@
 	    	}
 	    	return json_encode($resArr);
 		} 
+	}
+
+	function getIsDrawingUpcomingEvent(){
+		$sql= "SELECT e.name as Name, Date, Venue, Location
+				From event e 
+			    inner join `group` g on e.groupId = g.id and (g.name like 'WWS%' or g.name = 'Master')
+			    where  e.date >= CURDATE() and e.status <> 'Ended' and e.isDrawEvent = true
+			    order by date DESC";
+
+	    $result = connectDB($sql);
+
+		$resArr = [];
+		if ($result->num_rows > 0) {
+		    while($row = $result->fetch_assoc()) {
+		    	$resArr[] = $row;
+	    	}
+	    	return json_encode($resArr);
+		} 
+	}
+
+	function getToDrawList($upcomingEid){
+		$sql= "SELECT e.name as Name, Date, Venue, Location
+				From event  e 
+				inner join `participant` p on e.id = p.eventId and p.eventId = upcomingEid and p.notDrawing = 0;";
+
+	    $result = connectDB($sql);
+
+		$resArr = [];
+		if ($result->num_rows > 0) {
+		    while($row = $result->fetch_assoc()) {
+		    	$resArr[] = $row;
+	    	}
+	    	return json_encode($resArr);
+		}
 	}
 
     function connectDB($sql){
