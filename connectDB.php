@@ -11,8 +11,7 @@
 	function getEvent(){
 		$sql= "SELECT e.name as Name, Date, Venue, Location
 				From event  e 
-			    inner join `group` g on e.groupId = g.id
-			    where g.name like 'WWS%' or g.name = 'Master'
+			    inner join `group` g on e.groupId = g.id and (g.name like 'WWS%' or g.name = 'Master')
 			    order by date DESC";
 
 	    $result = connectDB($sql);
@@ -29,8 +28,8 @@
     function getUpcomingEvent(){
 		$sql= "SELECT e.name as Name, Date, Venue, Location
 				From event e 
-			    inner join `group` g on e.groupId = g.id
-			    where (g.name like 'WWS%' or g.name = 'Master') and e.date >= CURDATE() and e.status <> 'Ended'
+			    inner join `group` g on e.groupId = g.id and (g.name like 'WWS%' or g.name = 'Master')
+			    where  e.date >= CURDATE() and e.status <> 'Ended'
 			    order by date DESC";
 
 	    $result = connectDB($sql);
