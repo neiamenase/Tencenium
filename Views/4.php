@@ -67,10 +67,9 @@
 						var results = <?php include 'connectDB.php';	echo  getIsDrawingUpcomingEvent();?>;
 						select = '';
 						for ( var i = 0; i < results.length; i++) {
-							var obj = results[i];
-							select = select + "<option value=\"" + obj["Id"] + "\">" + obj["Name"] + "</option>";
+							select = select + "<option value=\"" + results[i]["Id"] + "\">" + results[i]["Name"] + "</option>";
 						}
-						document.write('<select>' + select + '</select>');
+						document.write('<select id=wb_upcomingSelect>' + select + '</select>');
 					</script>
 				</div>
 			</div>
