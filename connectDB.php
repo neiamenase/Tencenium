@@ -12,6 +12,7 @@
 		$sql= "SELECT e.name as Name, Date, Venue, Location
 				From event  e 
 			    inner join `group` g on e.groupId = g.id
+			    where g.name like 'WWS%' or g.name = 'Master'
 			    order by date DESC";
 
 	    $result = connectDB($sql);
@@ -25,6 +26,23 @@
 		} 
 	}
        
+    function getUpcomingEvent(){
+		$sql= "SELECT e.name as Name, Date, Venue, Location
+				From event e 
+			    inner join `group` g on e.groupId = g.id
+			    where (g.name like 'WWS%' or g.name = 'Master') and e.date >= CURDATE() and e.status <> 'Ended'
+			    order by date DESC";
+
+	    $result = connectDB($sql);
+
+		$resArr = [];
+		if ($result->num_rows > 0) {
+		    while($row = $result->fetch_assoc()) {
+		    	$resArr[] = $row;
+	    	}
+	    	return json_encode($resArr);
+		} 
+	}
 
     function connectDB($sql){
     	$servername = "localhost";

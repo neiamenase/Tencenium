@@ -71,6 +71,7 @@ td {
 
 tr:nth-child(even) {
   background-color: #e6e6fa;
+  class : "wb-stl-normal";
 }
 
 @media (min-width: 768px) {

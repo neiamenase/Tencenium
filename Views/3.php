@@ -79,22 +79,42 @@
 		<div class="vbox wb_container" id="wb_current_events">
 			<div class="wb_cont_inner">
 				<div id="wb_element_instance40" class="wb_element">
-					<table class="wb_form">
-						<tr>
-							<th><font color="white"> Event</th>
-							<th><font color="white"> Year</th>
-							<th><font color="white"> Venue</th>
-							<th><font color="white"> Location</th>
-						</tr>
-						<?php 	include 'connectDB.php';?>
-						<font color="white"> 
-							<?php
-								echo getEvent();
-							?>
-					</table>
+					<script type="text/javascript">
+						var results = <?php include 'connectDB.php';	echo  getEvent();?>;
+						table = '';
+						for ( var i = 0; i < results.length; i++) {
+							var obj = results[i];
+								//header 
+								if (i == 0){
+									table = table + "<tr>";
+									for ( var key in obj) {
+										table = table + "<th><font color=\"white\">" + key + "</th>"; 
+									}
+									table = table + "</tr>";
+								}
+								//body 
+								
+								table = table + "<tr>";
+								
+								for ( var key in obj) {
+									if ((i%2) > 0){
+										table = table + "<td><font color=\"white\">" + obj[key] + "</td>";
+									}else{
+										table = table + "<td>" + obj[key] + "</td>";
+									}
+								}
+								table = table + "</tr>";
+									// table = table + "<tr><th>Name: </th><td>" + results[i].eventName + "</td></tr>";
+									// table = table + "<tr><th>date: </th><td>" + results[i].date + "</td></tr>";
+									// table = table + "<tr><th>venue: </th><td>" + results[i].venue + "</td></tr>";
+									// table = table + "<tr><th>location: </th><td>" + results[i].location + "</td></tr>";
+									// table = table + "<tr><th>groupName: </th><td>" + results[i].groupName + "</td></tr>";
+								}
+								document.write('<table>' + table + '</table>');
+							</script>
+						</div>
+					</div>
 				</div>
-			</div>
-		</div>
 <!-- 					<div class="vbox wb_container" id="wb_main">
 						<div class="wb_cont_inner">
 							<div id="wb_element_instance34" class="wb_element">

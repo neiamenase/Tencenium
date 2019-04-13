@@ -52,7 +52,7 @@ th {
   border: 1px solid #dddddd;
   text-align: left;
   padding: 20px;
-  width : 30%;
+  width : 25%;
   class : "wb-stl-normal";
 }
 
@@ -61,7 +61,7 @@ td {
   border: 1px solid #dddddd;
   text-align: left;
   padding: 20px;
-  width : 70%;
+  width : 25%;
 }
 
 /*tr :nth-child(even) {

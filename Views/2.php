@@ -106,7 +106,7 @@
 				<div class="wb_cont_inner" style="height: 134px;">
 					<div id="wb_element_instance23" class="wb_element" style=" line-height: normal;">
 						<script type="text/javascript">
-							  var results = <?php include 'connectDB.php';	echo  getEvent();?>;
+							  var results = <?php include 'connectDB.php';	echo  getUpcomingEvent();?>;
 							  table = '';
 							 for ( var i = 0; i < results.length; i++) {
 								var obj = results[i];
