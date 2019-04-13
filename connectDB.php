@@ -44,7 +44,7 @@
 	}
 
 	function getIsDrawingUpcomingEvent(){
-		$sql= "SELECT e.name as Name, Date, Venue, Location
+		$sql= "SELECT e.id as Id, e.name as Name
 				From event e 
 			    inner join `group` g on e.groupId = g.id and (g.name like 'WWS%' or g.name = 'Master')
 			    where  e.date >= CURDATE() and e.status <> 'Ended' and e.isDrawEvent = true

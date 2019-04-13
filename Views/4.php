@@ -15,7 +15,7 @@
 	<link href="css/font-awesome/font-awesome.min.css?v=4.7.0" rel="stylesheet" type="text/css" />
 	<link href="css/site.css?v=20180215152128" rel="stylesheet" type="text/css" />
 	<link href="css/common.css?ts=1519836400" rel="stylesheet" type="text/css" />
-	<link href="css/3.css?ts=1519836400" rel="stylesheet" type="text/css" />
+	<link href="css/4.css?ts=1519836400" rel="stylesheet" type="text/css" />
 	{{ga_code}}
 	
 	<script type="text/javascript">var currLang = '';</script>
@@ -60,10 +60,27 @@
 			<div class="wb_cont_bg"></div>
 		</div>
 
-		<div class="wb_cont_outer"></div>
-		<div class="wb_cont_bg"></div>
+		<div class="vbox wb_container" id="wb_main">
+			<div class="wb_cont_inner">
+				<div id="wb_element_instance40" class="wb_element">
+					<script type="text/javascript">
+						var results = <?php include 'connectDB.php';	echo  getIsDrawingUpcomingEvent();?>;
+						select = '';
+						for ( var i = 0; i < results.length; i++) {
+							var obj = results[i];
+							select = select + "<option value=\"" + obj["Id"] + "\">" + obj["Name"] + "</option>";
+						}
+						document.write('<select>' + select + '</select>');
+					</script>
+				</div>
+			</div>
+		</div>
 	</div>
-	<div class="wb_sbg"></div>
+
+	<div class="wb_cont_outer"></div>
+	<div class="wb_cont_bg"></div>
+</div>
+<div class="wb_sbg"></div>
 </div>{{hr_out}}
 </body>
 </html>
