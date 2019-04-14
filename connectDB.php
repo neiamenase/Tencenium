@@ -8,6 +8,19 @@
 	//conn1 = mysqli_connect($servername, $username, $password);
 	//$conn = new PDO("mysql:host=$servername;dbname=$database", $username, $password);
 	//echo "<p>servername: $servername | username $username | password: $password | database $database<p>";
+
+if (isset($_POST['action'])) {
+    switch ($_POST['action']) {
+        case 'draw':
+        alert("action : " + $_POST['action']);
+        	if (isset($_POST['upcomingEId'])){
+        		alert("upcomingEId : " + $_POST['upcomingEId']);
+        		$list = getToDrawList($_POST['upcomingEId']);
+				alert("action performed successfully");
+        	}
+            break;
+    }
+}
 	function getEvent(){
 		$sql= "SELECT e.name as Name, Date, Venue, Location
 				From event  e 
@@ -61,10 +74,10 @@
 		} 
 	}
 
-	function getToDrawList($upcomingEid){
+	function getToDrawList($upcomingEId){
 		$sql= "SELECT e.name as Name, Date, Venue, Location
 				From event  e 
-				inner join `participant` p on e.id = p.eventId and p.eventId = upcomingEid and p.notDrawing = 0;";
+				inner join `participant` p on e.id = p.eventId and p.eventId = upcomingEId and p.notDrawing = 0;";
 
 	    $result = connectDB($sql);
 

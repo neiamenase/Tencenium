@@ -12,6 +12,28 @@
 	<script src="js/jquery-1.11.3.min.js" type="text/javascript"></script>
 	<script src="js/bootstrap.min.js" type="text/javascript"></script>
 	<script src="js/main.js?v=20180222164022" type="text/javascript"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js" type="text/javascript"></script>
+	<script type="text/javascript">
+		$(document).ready(function(){
+			$('.button').click(function(){
+				var selectValue = $(wb_upcomingSelect).val();
+				var ajaxurl = 'connectDB.php',
+				data =  {
+					'upcomingEId': selectValue,
+					'action' : 'draw'
+				};
+				$.ajax({
+					type: 'POST',
+					ajaxurl,
+					data,
+					function (response) {
+						alert("action performed successfully");
+					}
+				});
+			});
+
+		});
+	</script>
 	<link href="css/font-awesome/font-awesome.min.css?v=4.7.0" rel="stylesheet" type="text/css" />
 	<link href="css/site.css?v=20180215152128" rel="stylesheet" type="text/css" />
 	<link href="css/common.css?ts=1519836400" rel="stylesheet" type="text/css" />
@@ -23,6 +45,7 @@
 		<script src="js/html5shiv.min.js"></script>
 	<![endif]-->
 </head>
+
 <body>
 	<div class="root">
 		<div class="vbox wb_container" id="wb_header">
